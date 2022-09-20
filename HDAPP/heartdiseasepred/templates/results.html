@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result page</title>
+    <style>
+     body {
+            background-image:url("{% static 'hdprediction/images/hearthealth.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        .main{
+            position: fixed;
+            top: 250px;
+            left: 510px;
+            width: 250px;
+
+
+            background-color:#a5cefc;
+            border-radius: 10px;
+            border-style: solid;
+            align-items: center;
+
+        }
+
+        .top{
+        background-color:#1588c0;
+        margin-top: -15px;
+        border: none;
+        width: auto;
+        height: 25px;
+        }
+        a{
+        color:white;
+        font-size: 10px;
+        }
+        a:link{
+        text-decoration: none;
+        position: relative;
+        left: 20px;
+        }
+
+        a:hover{
+        color: #ea3f5c;
+        }
+        a:active{
+        color: white;
+        }
+    </style>
+</head>
+<body style="overflow: hidden">
+<div align= 'center' class="main">
+    <h1>The Results is : </h1>
+    <h2> {{result2}}</h2>
+
+</div>
+<div class="top">
+       <a class="home" href="http://127.0.0.1:8000/" >
+           <h1 >Home</h1>
+       </a>
+    <a class="Database" href="{% url 'Database' %}" STYLE="position:fixed; left: 750px; margin-top: -50px;">
+        <h1>Database</h1>
+    </a>
+    <a class="Doctor" href="{% url 'Doctor' %}" STYLE="position:fixed; left: 950px; margin-top: -50px;">
+        <h1>Contact Doctor</h1>
+    </a>
+    </div>
+</body>
+</html>

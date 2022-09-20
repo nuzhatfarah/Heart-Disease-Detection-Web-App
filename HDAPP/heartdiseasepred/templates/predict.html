@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <style>
+    body {
+            background-image:url("{% static 'hdprediction/images/formm.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .main{
+            position: fixed;
+            top: 5px;
+            left: 400px;
+            width: 400px;
+            height: 450px;
+            background-color:#ffffff;
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+        h1{
+            color: #0086b3;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #4dc3ff;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+p{
+font-size: 30px;
+margin-top: 40px;
+}
+td{
+text-align: left;}
+th,td{
+  border-bottom: 1.5px solid #ddd;}
+.top{
+margin-top: -100px;
+
+}
+a{
+        color:white;
+        }
+a:link{
+        text-decoration: none;
+        }
+        a:hover{
+        color: #ea3f5c;
+        }
+        a:active{
+        color: white;
+        }
+    </style>
+</head>
+<body>
+<p style="font-weight: bold;" >Fill out the form</p>
+<div align= 'center' class="main">
+    <h1>
+        Enter the following information ->
+    </h1>
+    <form action="result">
+        <table>
+            <tr>
+                <td align="right">Age: </td>
+                <td align="left"><input type="text" name="n1" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Gender: </td>
+                <td align="left">
+                    <select name="n2" autocomplete="off" required>
+                    <option value="1"  >Female</option>
+                    <option value="0" >Male</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Chest Pain: </td>
+                <td align="left"><input type="text" name="n3" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Resting Blood Pressure: </td>
+                <td align="left"><input type="text" name="n4" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Cholesterol: </td>
+                <td align="left"><input type="text" name="n5" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Fasting Blood Sugar: </td>
+                <td align="left"><input type="text" name="n6" required></td>
+            </tr>
+            <tr>
+                <td align="right">Rest Electrocardiographic: </td>
+                <td align="left"><input type="text" name="n7" required></td>
+            </tr>
+            <tr>
+                <td align="right">Maximum Heart Rate Achieved: </td>
+                <td align="left"><input type="text" name="n8" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Exercise-Induced Angina: </td>
+                <td align="left"><input type="text" name="n9" required></td>
+            </tr>
+            <tr>
+                <td align="right">Oldpeak: </td>
+                <td align="left"><input type="text" name="n10" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Slope: </td>
+                <td align="left"><input type="text" name="n11" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Number of Major Vessels Colored by Fluoroscopy: </td>
+                <td align="left"><input type="text" name="n12" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td align="right">Thal: </td>
+                <td align="left"><input type="text" name="n13" autocomplete="off" required></td>
+            </tr>
+
+        </table>
+        <input type="submit">
+    </form>
+
+
+</div>
+<div class="top">
+    <a class="home" href="http://127.0.0.1:8000/" >
+           <h1 >Home</h1>
+       </a>
+</div>
+</body>
+
+</html>

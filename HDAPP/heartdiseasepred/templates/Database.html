@@ -1,0 +1,88 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database</title>
+    <style>
+    body {
+            background-image:url("{% static 'hdprediction/images/pexels-castorly-stock-4058232.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        table, th, td {
+  border: 1px solid;
+}
+th {
+  background-color: #10258d;
+  color: white;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #b8d0f7;}
+tr:hover {background-color: coral;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="column">
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                     <th scope="col">age</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">chest pain type</th>
+                  <th scope="col"> resting blood pressure</th>
+                    <th scope="col"> cholesterol</th>
+                    <th scope="col">  fasting blood sugar</th>
+                    <th scope="col"> resting electrocardiographic</th>
+                    <th scope="col"> maximum heart rate achieved</th>
+                    <th scope="col"> exercise-induced angina</th>
+                    <th scope="col"> Old Peak</th>
+                    <th scope="col">Slope</th>
+                    <th scope="col"> number of major vessels colored by fluoroscopy</th>
+                    <th scope="col"> thal</th>
+                    <th scope="col"> Target</th>
+
+                </tr>
+              </thead>
+              <tbody>
+              {% for datas in dataset %}
+                <tr>
+                  <th scope="row">{{datas.id}}</th>
+                    <td>{{datas.age}}</td>
+                  <td>{{datas.sex}}</td>
+                  <td>{{datas.cp}}</td>
+                    <td>{{datas.trestbps}}</td>
+                    <td>{{datas.chol}}</td>
+                    <td>{{datas.fbs}}</td>
+                    <td>{{datas.restecg}}</td>
+                    <td>{{datas.thalach}}</td>
+                    <td>{{datas.exang}}</td>
+                    <td>{{datas.oldpeak}}</td>
+                    <td>{{datas.slope}}</td>
+                    <td>{{datas.ca}}</td>
+                    <td>{{datas.thal}}</td>
+                    <td>{{datas.target}}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doctors</title>
+    <style>
+    body {
+            background-image:url("{% static 'hdprediction/images/Doctor.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        table, th, td {
+  border: 10px solid;
+}
+th {
+  background-color: #9ab7f6;
+  color: #0c528b;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+font-size: 13px;
+}
+tr:nth-child(even) {background-color: #fce6eb;}
+tr:nth-child(odd) {background-color: #f7b9be;}
+tr:hover {background-color: coral;}
+table{
+border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+<div class="container"></div>
+    <div class="row">
+        <div class="column">
+
+            <table class="table">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Qualifications</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Doctor Contact number</th>
+                    <th scope="col">Hotline</th>
+                    <th scope="col">Consulting Hour</th>
+                    <th scope="col"> Consulting Days</th>
+
+                </tr>
+              </thead>
+ {% for datas in dataset %}
+                <tr>
+                  <th scope="row">{{datas.id}}</th>
+                    <td>{{datas.Name}}</td>
+                  <td>{{datas.City}}</td>
+                  <td>{{datas.Qualification}}</td>
+                    <td>{{datas.Address}}</td>
+                    <td>{{datas.Phone}}</td>
+                    <td>{{datas.Hotline}}</td>
+                    <td>{{datas.ConsultingHour}}</td>
+                    <td>{{datas.ConsultingDay}}</td>
+                </tr>
+              {% endfor %}
+            </table>
+
+                </div>
+        </div>
+</body>
+</html>
